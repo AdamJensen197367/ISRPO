@@ -1,0 +1,180 @@
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #fac670;
+}
+
+.logo {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 20px 0 20px;
+}
+
+.logo > h1 {
+	color: #1b1a19;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.logo > svg {
+	width: 40px;
+	height: 40px;
+}
+
+.title {
+	padding: 0 20px;
+	width: 50rem;
+}
+
+.title > h1 {
+	font-size: 6.5em;
+	line-height: 0.8;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	color: #1b1a19;
+}
+
+.title > h1 > span {
+	color: #f37925;
+}
+
+.footer {
+	width: 30rem;
+	padding: 0 20px;
+	margin-bottom: 40px;
+}
+
+.footer > p {
+	font-size: 1.4em;
+	line-height: 1.3;
+}
+
+.left {
+	position: relative;
+	flex: 1;
+	background-color: #1b1a19;
+	padding-left: 5.7rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	gap: 10px;
+}
+
+.keys,
+.dark0,
+.dark1 {
+	width: 100%;
+	padding: 3.3rem 2rem;
+	border-top-left-radius: 14px;
+	border-bottom-left-radius: 14px;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.keys > span {
+	background-color: rgba(0, 0, 0, 0.18);
+	padding: 1.7rem 1.9rem;
+	font-size: 18px;
+	border-radius: 14px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+.keys:hover,
+.dark0:hover,
+.dark1:hover {
+	transform: translateX(40px);
+}
+
+.dark0,
+.dark1 {
+	position: absolute;
+	right: 0;
+	width: 60%;
+	top: 13rem;
+	background-color: black;
+	z-index: 1;
+}
+
+.dark0 > span,
+.dark1 > span {
+	background-color: hsla(0, 0%, 57%, 0.107);
+	padding: 1.7rem 1.9rem;
+	font-size: 18px;
+	border-radius: 14px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+.dark1 {
+	top: 30rem;
+}
+
+@media (max-width: 1440px) {
+	.title {
+		width: 100%;
+	}
+	.footer {
+		width: 70%;
+	}
+}
+
+@media (max-width: 1280px) {
+	.title > h1 {
+		font-size: 5em;
+	}
+	.footer {
+		width: 70%;
+	}
+}
+
+@media (max-width: 1280px) {
+	.container {
+		flex-direction: column;
+		height: auto;
+	}
+	.right {
+		gap: 100px;
+	}
+	.title {
+		width: 70%;
+	}
+	.footer {
+		width: 55%;
+	}
+	.left {
+		padding: 40px 0 40px 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	.right {
+		gap: 100px;
+	}
+	.title {
+		width: 100%;
+	}
+	.footer {
+		width: 80%;
+	}
+}
